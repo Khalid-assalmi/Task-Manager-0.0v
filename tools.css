@@ -1,0 +1,212 @@
+body {
+    background-color: #2b2d42;
+}
+.style {
+    margin-top: 75px;
+    margin-left: 75px;
+    margin-right: 75px;
+    height: 380px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+@media (min-width: 0px) {
+    h1 {
+        color: #2b2d42;
+        padding-top: 20px;
+        padding-left: 26%;
+        margin-bottom: 60px;
+    }
+    input {
+        margin-left: 14% ;
+        margin-right: 18%;
+        width: 220px;
+    }
+    .style button {
+        margin-left: 14% ;
+        margin-right: 18%;
+        width: 235px;
+        padding-left: 18%;
+        padding-right: 10%;
+    }
+}
+@media (min-width: 600px) {
+    h1 {
+        color: #2b2d42;
+        padding-left: 38%;
+        padding-top: 20px;
+    }
+    input {
+        margin-left: 20% ;
+        margin-right: 32%;
+        width: 300px;
+    }
+    .style button {
+        margin-left: 20% ;
+        margin-right: 32%;
+        width: 315px;
+        padding-left: 18%;
+        padding-right: 10%;
+    }
+}
+@media (min-width: 800px) {
+    h1 {
+        color: #2b2d42;
+        padding-left: 38%;
+        padding-top: 20px;
+    }
+    input {
+        margin-left:28% ;
+        margin-right: 32%;
+        width: 300px;
+    }
+    .style button {
+        margin-left:28% ;
+        margin-right: 32%;
+        width: 315px;
+        padding-left: 18%;
+        padding-right: 10%;
+    }
+}
+@media (min-width: 900px) {
+    h1 {
+        color: #2b2d42;
+        padding-left: 42%;
+        padding-top: 20px;
+    }
+    input {
+        margin-left: 34% ;
+        margin-right: 43%;
+        width: 300px;
+    }
+    .style button {
+        margin-left: 34% ;
+        margin-right: 43%;
+        width: 310px;
+        padding-left: 12%;
+        padding-right: 10%;
+    }
+}
+@media (min-width: 1024px) {
+    h1 {
+        color: #2b2d42;
+        padding-left: 45%;
+        padding-top: 20px;
+    }
+    input {
+        margin-left: 37% ;
+        margin-right: 43%;
+        width: 300px;
+    }
+    .stule button {
+        margin-left: 37% ;
+        margin-right: 43%;
+        width: 320px;
+        padding-left: 14%;
+        padding-right: 10%;
+    }
+}
+@media (min-width: 1140px) {
+    h1 {
+        color: #2b2d42;
+        padding-left: 45%;
+        padding-top: 20px;
+    }
+    input {
+        margin-left: 37% ;
+        margin-right: 43%;
+        width: 300px;
+    }
+    .style button {
+        margin-left: 37% ;
+        margin-right: 43%;
+        width: 320px;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+.style input{
+    text-decoration: none;
+    display: flex;
+    padding-left: 8px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 15px;
+}
+input:hover {
+    border: 2px solid #000
+}
+input:focus {
+    border: 2px solid #8b0;
+}
+.style button{
+    text-decoration: none;
+    display: flex;
+    color: #fff;
+    background-color: #2b2d42;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 25px;
+    border-radius: 15px;
+    border: none;
+}
+.style button:hover {
+    background-color: #8b0000;
+    transform: scale(1.03,1.03);
+}
+.back {
+    padding-left: 8px;
+    padding-top: 5px;
+    color: #2b2d42;
+    width: 24px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 25px;
+}
+.back:hover {
+    background-color: #d6d3d3;
+}
+.back a {
+    text-decoration: none;
+}
+.display {
+    margin-right: 12px;
+    margin-left: 12px;
+    border: 2px solid black;
+    height: 360px;
+    padding: 8px;
+    border-radius: 15px;
+    overflow-y: auto;
+}
+.style-two {
+    margin-top: 75px;
+    margin-left: 75px;
+    margin-right: 75px;
+    height: 480px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.style-two h1{
+    margin-bottom: 30px;
+}
+.display h3 {
+    margin : 5px;
+
+}
+.r {
+    margin-left: 8px;
+    font-size: larger;
+}
+.span {
+    width: 15px;
+    height: 15px;
+    border:2px solid #000;
+    padding-left:2px;
+    padding-bottom: 4px;
+    margin-right: 2px;
+    margin-top: 4px;
+}
+.new {
+    display: flex;
+    justify-content: space-between;
+}
