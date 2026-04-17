@@ -1,71 +1,444 @@
+:root {
+    --main: #111;
+    --font-color: #dab514;
+    --white: #fff;
+    --search-button-hover: #161616;
+    --gray: #c0c0c0;
+    --settingsBtn-hover: #af941a;
+    --emptyBox-color: #b9b9b9;
+    --settingCard-hover: #f0f0f0;
+    --signInBtn-bg: rgb(235, 11, 11);
+    --signInBtn-hover-bg: rgb(255, 20, 20);
+}
+* {
+    font-weight: 600;
+    cursor: default;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 3;
+    color: #222;
+}
 body {
-    background-color: #3d4063;
+    overflow-x: hidden;
 }
-@media (min-width: 0px) {
-    h1 {
-        color: #3d4063;
-        padding-top: 20px;
-        padding-left: 18%;
-        margin-bottom: 60px;
-    }
-    a {
-        margin-left: 18% ;
-        margin-right: 18%;
-    }
+button {
+    cursor: pointer;
 }
-@media (min-width: 600px) {
-    h1 {
-        color: #3d4063;
-        padding-left: 32%;
-        padding-top: 20px;
-    }
-    a {
-        margin-left: 32% ;
-        margin-right: 32%;
-    }
-}
-@media (min-width: 900px) {
-    h1 {
-        color: #3d4063;
-        padding-left: 32%;
-        padding-top: 20px;
-    }
-    a {
-        margin-left: 32% ;
-        margin-right: 43%;
-    }
-}
-@media (min-width: 1024px) {
-    h1 {
-        color: #3d4063;
-        padding-left: 40%;
-        padding-top: 20px;
-    }
-    a {
-        margin-left: 40% ;
-        margin-right: 40%;
-    }
-}
-.style {
-    margin-top: 65px;
-    margin-left: 75px;
-    margin-right: 75px;
-    height: 480px;
-    border-radius: 15px;
-    background-color: #fff;
-}
-.style a{
+a {
     text-decoration: none;
-    display: flex;
-    color: #fff;
-    background-color: #3d4063;
-    padding-left: 55px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-top: 15px;
-    border-radius: 15px;
 }
-a:hover {
-    background-color: #8b0000;
-    transform: scale(1.03,1.03);
+.top {
+    background-color: var(--main);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 18px 12px 12px 16px;
+    display: flex;
+}
+input[type="search"] {
+    background-color: var(--white);
+    border: none;
+    outline: none;
+    max-width: 280px;
+    width: 46vw;
+    height: 5vh;
+    box-sizing: border-box;
+    padding: 0 12px 0 8px;
+    font-size: 16px;
+    cursor: text;
+    border-radius: 25px;
+    z-index: 0;
+    transition: 0.5s;
+}
+.tools {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    height: 5vh;
+}
+.tools button {
+    position: relative;
+    left: 40px;
+    background-color: var(--main);
+    border: 2px solid var(--white);
+    color: var(--white);
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    font-size: 12px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.tools button:hover {
+    background-color: var(--search-button-hover);
+}
+#searchBackBtn {
+    display: block;
+    position: relative;
+    right: 16px;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: var(--main);
+}
+#settingsBtnIcon {
+    color: var(--font-color);
+    cursor: pointer;
+}
+#settingsBtnIcon:hover, #icon:hover {
+    color: var(--settingsBtn-hover);
+}
+.signInBtn {
+    color: var(--white);
+    font-size: 15px;
+    background-color: var(--signInBtn-bg);
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+    max-height: 32px;
+    align-items: center;
+    padding: 0 12px;
+    border-radius: 25px;
+    position: fixed;
+    left: 16px;
+    transition: 0.4s;
+    cursor: pointer;
+    border: none;
+}
+.signInBtn:hover {
+    background-color: var(--signInBtn-hover-bg);
+    border-radius: 8px;
+    box-shadow: 0 0 12px #000;
+}
+.container {
+    background-color: var(--main);
+    position: absolute;
+    top: 6vh;
+    left: 0;
+    right: 0;
+    height: 26vh;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px 6vw;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+h1 {
+    color: var(--white);
+}
+#yellowColor {
+    color: var(--font-color);
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#icon {
+    color: var(--font-color);
+}
+.text {
+    animation: appear 0.8s linear forwards;
+    font-weight: 600;
+}
+nav {
+    background-color: var(--main);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#focus {
+    color: var(--font-color);
+}
+b:hover #focus {
+    color: var(--settingsBtn-hover);
+}
+b:hover i , b:hover span {
+    color: var(--gray);
+}
+i {
+    color: var(--white);
+    cursor: pointer;
+}
+a {
+    color: var(--gray);
+    cursor: pointer;
+}
+.hiddenText {
+    color: var(--white);
+    cursor: pointer;
+}
+b {
+    display: flex;
+    gap: 10px;
+}
+.productsContianer {
+    width: 100vw;
+    margin-top: 30vh;
+    box-sizing: border-box;
+    padding-top: 50px;
+    justify-content: center;
+    padding-bottom: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: appear 0.8s linear forwards;
+    z-index: 1;
+}
+.productCard {
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s;
+}
+.productCard, .productCard img, .productCard .priceBox, .productCard .descriptionBox {
+    cursor: pointer;
+}
+.searchContianer {
+    width: 100vw;
+    position: fixed;
+    top: 8vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: appear 0.3s linear forwards;
+    z-index: 1;
+    box-sizing: border-box;
+    padding-top: 50px;
+    padding-bottom: 90px;
+    padding-right: 12px;
+    background-color: var(--white);
+    overflow: auto;
+    display: none;
+}
+.notFoundMassege, .loadingBox {
+    color: var(--main);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8vh;
+}
+.notFoundMassege #searchIcon {
+    display: block;
+    color: var(--main);
+    font-size: 60px;
+    cursor: default;
+}
+.notFoundMassege span, .loadingBox span {
+    margin-top: 60px;
+    font-size: 23px;
+}
+.loadingBox .circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid var(--gray);
+    border-top: 3px solid var(--main);
+    animation: rotate 0.5s linear infinite forwards;
+}
+.imgBox {
+    background-color: var(--emptyBox-color);
+    animation: load 1s linear 1s infinite forwards;
+}
+.priceBox {
+    font-size: 21px;
+    display: flex;
+    gap: 6px;
+}
+.descriptionBox {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.settingsBox {
+    position: fixed;
+    top: 42px;
+    right: 24px;
+    background-color: var(--white);
+    animation: appearSettingsBox 0.2s linear forwards;
+    border-radius: 16px;
+    width: 180px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 12px #000;
+    overflow: hidden;
+    padding: 0 16px;
+}
+.hide {
+    animation: hideSettingsBox 1s linear reverse forwards;
+}
+.settingCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+    cursor: pointer;
+    padding: 0 6px;
+}
+.settingCard a {
+    color: var(--main);
+    animation: none;
+}
+#paymentCard {
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}
+.settingCard:hover {
+    background-color: var(--settingCard-hover);
+}
+.settingCard i {
+    color: var(--main)
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        translate: 0 100px;
+    }
+}
+@keyframes hide {
+    to {
+        opacity: 0;
+        translate: 0 100px;
+    }
+}
+@keyframes appearSettingsBox {
+    from {
+        translate: 16px -16px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}
+@keyframes hideSettingsBox {
+    to {
+        translate: 16px -16px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+}
+@keyframes load {
+    0% {
+        background: linear-gradient(to right bottom, #d3d3d3, var(--gray), var(--gray), var(--gray), var(--gray));
+    }
+    20% {
+        background: linear-gradient(to right bottom, var(--gray), #d3d3d3, var(--gray), var(--gray), var(--gray));
+    }
+    40% {
+        background: linear-gradient(to right bottom, var(--gray), var(--gray), #d3d3d3, var(--gray), var(--gray));
+    }
+    60% {
+        background: linear-gradient(to right bottom, var(--gray), var(--gray), var(--gray), #d3d3d3, var(--gray));
+    }
+    80% {
+        background: linear-gradient(to right bottom, var(--gray), var(--gray), var(--gray), var(--gray), #d3d3d3);
+    }
+    100% {
+        background: linear-gradient(to right bottom, var(--gray));
+    }
+}
+@keyframes rotate {
+    to {
+        rotate: 360deg;
+    }
+}
+@media (max-width: 680px) {
+    .hiddenText {
+        display: none;
+    }
+    nav {
+        gap: 18vw;
+    }
+    .productCard {
+        width: 44vw;
+        border-radius: 12px;
+        border: 2px solid var(--gray);
+        height: 69vw;
+        padding: 2px;
+    }
+    .productsContianer, .searchContianer {
+        gap: 4.3vw;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .imgBox {
+        width: 100%;
+        height: 73%;
+        border-top-right-radius: 9px;
+        border-top-left-radius: 9px;
+    }
+    .priceBox {
+        border-radius: 9px;
+        margin-right: 7px;
+        margin-top: 7px;
+        display: flex;
+        align-items: center;
+    }
+    .descriptionBox {
+        border-radius: 9px;
+        margin-right: 7px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: 9px;
+        border-top-left-radius: 9px;
+    }
+}
+@media (min-width: 681px) {
+    span {
+        display: block;
+    }
+    nav {
+        gap: 16vw;
+    }
+    .productCard {
+        width: 90vw;
+        height: 200px;
+        box-shadow: 0 0 6px #000;
+        border-radius: 16px;
+    }
+    .productsContianer, .searchContianer {
+        flex-direction: column;
+        gap: 22px;
+    }
+    .imgBox {
+        width: 180px;
+        height: 90%;
+        border-radius: 9px;
+        position: absolute;
+        top: 5%;
+        right: 13px;
+    }
+    .priceBox {
+        border-radius: 9px;
+        position: absolute;
+        top: 10%;
+        right: 213px;
+    }
+    .descriptionBox {
+        border-radius: 9px;
+        position: absolute;
+        top: 29%;
+        right: 213px;
+        font-size: 17px;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 9px;
+    }
 }
